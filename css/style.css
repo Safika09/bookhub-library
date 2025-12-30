@@ -1,0 +1,1520 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body 
+{
+    background-color: #fffdd0 !important;
+    font-family: Verdana, Tahoma, sans-serif;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 150px; 
+    box-sizing: border-box;
+}
+
+main 
+{
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+/* ===== TYPOGRAPHY ===== */
+
+h1, h2, h3, h4, h5, h6, p, span, div, a, li, button, input, textarea, label 
+{
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+h1 
+{
+    color: #70004b;
+    font-size: 30pt;
+    padding: 30px 20px;
+    margin: 0;
+    text-align: center;
+}
+
+h2 
+{
+    color: #70004b;
+    font-size: 20pt;
+    padding: 25px 20px;
+    margin: 0;
+    text-align: center;
+    border-bottom: 3px solid #3A0CA3;
+}
+
+p 
+{
+    color: #3a1933;
+    font-size: 15pt;
+    margin-top: 10px;
+}
+
+/* ===== NAVIGATION ===== */
+nav 
+{
+    width: 100%;
+    height: 100px;
+    background-color: #7D71A7;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo 
+{
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+nav .logo a 
+{
+    font-size: 24pt;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav .logo i 
+{
+    margin-right: 10px;
+}
+
+nav ul 
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    height: 100px;
+    align-items: center;
+}
+
+nav ul li 
+{
+    display: inline-block;
+    line-height: 100px;
+}
+
+nav ul li a 
+{
+    text-decoration: none;
+    font-size: 16pt;
+    color: #ffffff;
+    padding: 0 20px;
+    height: 100px;
+    line-height: 100px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a:hover 
+{
+    color: #b9b6c5;
+}
+
+/* ===== GENERAL BUTTON STYLES ===== */
+
+.btn-primary 
+{
+    background-color: #7D71A7 !important;
+    border-color: #7D71A7 !important;
+    transition: 0.3s;
+}
+
+.btn-primary:hover 
+{
+    background-color: #5a5180 !important;
+    border-color: #5a5180 !important;
+}
+
+.btn-outline-primary 
+{
+    color: #7D71A7 !important;
+    border-color: #7D71A7 !important;
+    transition: 0.3s;
+}
+
+.btn-outline-primary:hover 
+{
+    background-color: #7D71A7 !important;
+    color: white !important;
+    border-color: #7D71A7 !important;
+}
+
+.btn-outline-danger 
+{
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+.btn-outline-danger:hover 
+{
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+}
+
+.form-control:focus 
+{
+    border-color: #7D71A7 !important;
+    box-shadow: 0 0 0 0.25rem rgba(125, 113, 167, 0.25) !important;
+}
+
+/* ===== FORM & INPUT STYLES ===== */
+
+input, textarea, select 
+{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+textarea 
+{
+    height: 150px;
+    resize: vertical;
+}
+
+/* Default button style - untuk general use */
+button 
+{
+    background-color: #fffbc6;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    border: none;
+    transition: 0.3s;
+}
+
+button:hover 
+{
+    background-color: #ffe966;
+}
+
+label 
+{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group 
+{
+    margin-bottom: 20px;
+}
+
+
+/* ===== ALERT MESSAGES ===== */
+
+
+.alert 
+{
+    border-radius: 8px;
+    border: none;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.alert-success 
+{
+    background-color: #d4edda;
+    color: #155724;
+    border-left: 4px solid #28a745;
+}
+
+.alert-danger 
+{
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left: 4px solid #dc3545;
+}
+
+/* ===== AUTH PAGES (Login/Register) ===== */
+
+.auth-header 
+{
+    width: 100%;
+    background-color: #7D71A7;
+    padding: 0 50px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.auth-main 
+{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    min-height: 70vh;
+}
+
+.auth-box 
+{
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 20px 0;
+}
+
+.auth-box.register 
+{
+    max-width: 450px;
+}
+
+.auth-box.login 
+{
+    max-width: 400px;
+}
+
+/* ===== DASHBOARD/HOME PAGE ===== */
+
+.reading-status-card 
+{
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    min-width: 150px;
+    flex: 1;
+    border-top: 4px solid #7D71A7;
+    transition: all 0.3s;
+}
+
+.reading-status-card:hover
+{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(125, 113, 167, 0.2);
+}
+
+.status-number 
+{
+    font-size: 2.5rem;
+    color: #7D71A7;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.status-label 
+{
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.books-grid 
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.book-card 
+{
+    background: white;
+    border-radius: 12px;
+    padding: 20px 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 10px; /* Space untuk button */
+}
+
+.book-card:hover 
+{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(125, 113, 167, 0.2);
+}
+
+.book-title 
+{
+    font-size: 1rem;
+    font-weight: 700;
+    color: #5A4F7A;
+    margin-bottom: 5px;
+    line-height: 1.2;
+    height: 2.4em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.rating 
+{
+    color: #ffc107;
+    font-weight: 600;
+    margin: 15px 0 10px 0; /* Adjust margin untuk beri space untuk button */
+    font-size: 0.9rem;
+}
+
+.rating i 
+{
+    margin-right: 5px;
+}
+
+.author 
+{
+    color: #7D71A7;
+    font-size: 0.85rem;
+    margin: 5px 0 0 0; /* Adjust margin */
+    font-weight: 500;
+}
+
+.book-cover 
+{
+    width: 140px;
+    height: 190px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 auto 15px auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.book-cover img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.book-card:hover .book-cover img 
+{
+    transform: scale(1.05);
+}
+
+.keep-reading-grid 
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.keep-reading-card 
+{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: all 0.3s;
+}
+
+.keep-reading-card:hover 
+{
+    transform: translateX(5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.keep-reading-card .book-cover 
+{
+    width: 70px;
+    height: 95px;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.keep-reading-content 
+{
+    flex: 1;
+    text-align: left;
+}
+
+.keep-reading-title 
+{
+    color: #5A4F7A;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.keep-reading-author 
+{
+    color: #777;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+/* ===== BUTTON STYLES FOR BOOK CARDS (INDEX.HTML) ===== */
+
+/* Button untuk book-card dalam index.html */
+.book-card button {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    width: 120px;
+    text-align: center;
+    margin: 10px auto 5px auto;
+    display: block;
+}
+
+/* Borrow & Read Button - Warna SAMA #653C87 */
+.btn-borrow, .btn-read {
+    background-color: #653C87 !important;
+    color: white !important;
+    border-color: #4F2D6B !important;
+}
+
+.btn-borrow:hover, .btn-read:hover {
+    background-color: #4F2D6B !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(101, 60, 135, 0.3);
+}
+
+/* Checked Out Button - Warna pudar */
+.btn-checked-out {
+    background-color: #9E9E9E !important;
+    color: #616161 !important;
+    border-color: #757575 !important;
+    opacity: 0.7;
+    cursor: not-allowed !important;
+}
+
+.btn-checked-out:hover {
+    background-color: #757575 !important;
+    transform: none;
+    box-shadow: none;
+}
+
+/* ===== CHARTS SECTION ===== */
+
+.chart-card 
+{
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.chart-header 
+{
+    background-color: #7D71A7;
+    color: white;
+    padding: 20px;
+    border-radius: 15px 15px 0 0;
+}
+
+.chart-header h5 
+{
+    margin: 0;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.chart-body 
+{
+    padding: 25px;
+    text-align: center; 
+}
+
+.chart-center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.chart-container-large 
+{
+    position: relative;
+    height: 300px;
+    width: 100%;
+    max-width: 350px; 
+    margin: 0 auto;   
+}
+
+/* Donut Chart*/
+
+#genreChart {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.chart-summary 
+{
+    background-color: rgba(252, 246, 217, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-align: left; 
+    margin-top: 15px;
+}
+
+.chart-summary p 
+{
+    margin: 0;
+    color: #5A4F7A;
+}
+
+/* ===== ACCOUNT PAGE ===== */
+
+.profile-icon 
+{
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+    background-color: #7D71A7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #CAADFF;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.profile-icon-main 
+{
+    color: white;
+    font-size: 4.5rem;
+}
+
+.card 
+{
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.card:hover 
+{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.card-header 
+{
+    background-color: #7D71A7;
+    color: white;
+    border-bottom: none;
+    padding: 15px 20px;
+    border-radius: 12px 12px 0 0 !important;
+}
+
+.card-header h5 
+{
+    margin: 0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.card-body 
+{
+    padding: 25px;
+}
+
+.account-stats 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.stat-item 
+{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    background-color: rgba(252, 246, 217, 0.2);
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.stat-item:hover 
+{
+    background-color: rgba(125, 113, 167, 0.1);
+    transform: translateX(5px);
+}
+
+.stat-item i 
+{
+    font-size: 1.5rem;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.stat-item h6 
+{
+    color: #5A4F7A;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.stat-item p 
+{
+    color: #7D71A7;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.settings-list 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.setting-item 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.setting-item:hover 
+{
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+}
+
+.setting-item h6 
+{
+    color: #5A4F7A;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.setting-item p 
+{
+    color: #777;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+/* ===== CONTACT PAGE ===== */
+
+.map-contact-container 
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.mapbox 
+{
+    width: 60%;
+    height: 600px;
+    background-size: cover;
+    padding-top: 30px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden; 
+    position: relative; 
+}
+
+.mapbox iframe 
+{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.contactbox 
+{
+    width: 30%;
+    height: auto;
+    float: right;
+    box-sizing: border-box;
+    padding: 30px;
+    background-color: #FFC2E2;
+    border: 2px solid #afafaf;
+    border-radius: 10px;
+    margin-top: 150px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    text-align: center;
+}
+
+.messagebox 
+{
+    width: 60%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #B09AFF;
+    border: 2px solid #6d6d6d;
+    border-radius: 10px;
+}
+
+/* ===== BOOKS PAGE ===== */
+
+.collection-description 
+{
+    background-color: #CDB1FF;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 25px;
+    max-width: 800px;
+    margin: 20px auto 30px auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.collection-description p 
+{
+    color: #000;
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.genre-section 
+{
+    margin-bottom: 60px;
+    padding: 0 20px;
+}
+
+.horizontal-scroll-container 
+{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.horizontal-scroll-wrapper 
+{
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding: 20px 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #7D71A7 #f0f0f0;
+}
+
+/* Custom scrollbar */
+.horizontal-scroll-wrapper::-webkit-scrollbar 
+{
+    height: 8px;
+}
+
+.horizontal-scroll-wrapper::-webkit-scrollbar-track 
+{
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.horizontal-scroll-wrapper::-webkit-scrollbar-thumb 
+{
+    background: #7D71A7;
+    border-radius: 10px;
+}
+
+.horizontal-scroll-wrapper::-webkit-scrollbar-thumb:hover 
+{
+    background: #5a5180;
+}
+
+/* ===== BOOK CARD HORIZONTAL WITH BUTTONS (BOOKS.HTML) ===== */
+
+.book-card-horizontal {
+    flex: 0 0 auto;
+    width: 350px;
+    background-color: #FFD6FF;
+    border: 2px solid #4e4b4b;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;
+    transition: all 0.3s ease;
+    min-height: 250px;
+}
+
+.book-card-horizontal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #FFD6FF;
+}
+
+.book-cover-container {
+    position: relative;
+    width: 150px;
+    height: 240px; 
+    margin: 0 auto;
+}
+
+.book-card-horizontal img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #7D71A7;
+    display: block;
+}
+
+.book-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.book-card-horizontal .book-title {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #3a1933;
+    line-height: 1.3;
+    font-weight: bold;
+}
+
+.book-card-horizontal .rating {
+    color: #ffc107;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    font-size: 14px;
+}
+
+.book-card-horizontal .book-desc {
+    color: #000000c9;
+    font-size: 14px;
+    line-height: 1.4;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    flex-grow: 1;
+}
+
+.romance-container, .fiction-container 
+{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 25px;
+    padding: 10px;
+}
+
+.romance-description, .fiction-description 
+{
+    background-color: #FCF6D9;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto 30px auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.romance-description p, .fiction-description p 
+{
+    color: #000;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Button untuk books.html (horizontal cards) */
+.book-card-horizontal button {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    width: 140px;
+    text-align: center;
+    margin: 10px auto;
+    display: block;
+}
+
+/* ===== HISTORY PAGE ===== */
+
+.history-header 
+{
+    width: 100%;
+    height: 100px;
+    background-color: #7D71A7;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+}
+
+.history-header .logo 
+{
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+.history-header .logo a 
+{
+    font-size: 24pt;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.history-header .logo i 
+{
+    margin-right: 10px;
+}
+
+.history-container 
+{
+    min-height: calc(100vh - 200px);
+    background-color: #fffdd0;
+    padding: 40px 20px;
+}
+
+.history-title-section 
+{
+    margin-bottom: 40px;
+}
+
+.history-title-section h1 
+{
+    color: #7D71A7;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.history-subtitle 
+{
+    color: #666;
+    font-size: 18px;
+    margin: 0;
+}
+
+.history-table-container 
+{
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.history-table 
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.history-table thead 
+{
+    background-color: #7D71A7;
+    color: white;
+}
+
+.history-table th 
+{
+    padding: 18px 15px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+}
+
+.history-table tbody tr 
+{
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s;
+}
+
+.history-table tbody tr:hover 
+{
+    background-color: rgba(125, 113, 167, 0.05);
+}
+
+.history-table td 
+{
+    padding: 16px 15px;
+    color: #333;
+    font-size: 15px;
+}
+
+.history-table td:first-child
+ {
+    color: #560BAD;
+    font-weight: 600;
+}
+
+.history-table td:nth-child(2) {
+    color: #5A4F7A;
+    font-weight: 600;
+}
+
+.history-table td:nth-child(3) 
+{
+    color: #70004b;
+}
+
+.history-table td:last-child 
+{
+    color: #666;
+}
+
+.back-button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-back {
+    background-color: #7D71A7;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-back:hover {
+    background-color: #5a5180;
+    transform: translateY(-2px);
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    .history-header {
+        padding: 0 20px;
+        height: 80px;
+    }
+    
+    .history-header .logo a {
+        font-size: 20pt;
+    }
+    
+    .history-container {
+        padding: 30px 15px;
+    }
+    
+    .history-table-container {
+        padding: 20px;
+        overflow-x: auto;
+    }
+    
+    .history-table {
+        min-width: 600px;
+    }
+    
+    .history-table th,
+    .history-table td {
+        padding: 12px 10px;
+        font-size: 14px;
+    }
+    
+    .history-title-section h1 {
+        font-size: 28px;
+    }
+    
+    .history-subtitle {
+        font-size: 16px;
+    }
+    
+    .btn-back {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .history-header {
+        padding: 0 15px;
+        height: 70px;
+    }
+    
+    .history-header .logo a {
+        font-size: 18pt;
+    }
+    
+    .history-header .logo i {
+        font-size: 1.5rem;
+    }
+    
+    .history-container {
+        padding: 20px 10px;
+    }
+    
+    .history-title-section h1 {
+        font-size: 24px;
+    }
+    
+    .history-subtitle {
+        font-size: 15px;
+    }
+    
+    .history-table th,
+    .history-table td {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+    
+    .history-table {
+        min-width: 500px;
+    }
+}
+
+/* ===== FOOTER ===== */
+footer 
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #7D71A7;
+    text-align: center;
+    padding: 25px 0;
+}
+
+footer p 
+{
+    color: white;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.social-media 
+{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.social-media a 
+{
+    color: white;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.social-media a:hover 
+{
+    color: #b9b6c5;
+    transform: translateY(-3px);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 768px) 
+{
+    /* Navigation */
+    nav {
+        padding: 0 20px;
+        height: 80px;
+    }
+    
+    nav .logo a 
+    {
+        font-size: 20pt;
+    }
+    
+    nav ul li a 
+    {
+        font-size: 14pt;
+        padding: 0 15px;
+        height: 80px;
+        line-height: 80px;
+    }
+    
+    /* Headings */
+    h1 
+    {
+        font-size: 24pt;
+        padding: 20px 15px;
+    }
+    
+    h2
+    {
+        font-size: 18pt;
+        padding: 20px 15px;
+    }
+    
+    /* Auth Pages */
+    .auth-header 
+    {
+        padding: 0 20px;
+        height: 80px;
+    }
+    
+    .auth-main 
+    {
+        padding: 20px 0;
+    }
+    
+    .auth-box 
+    {
+        padding: 30px 20px;
+        margin: 0 15px;
+        max-width: 90% !important;
+    }
+    
+    /* Books Page */
+    .book-card-horizontal 
+    {
+        width: 300px;
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .book-card-horizontal img 
+    {
+        width: 120px;
+        height: 160px;
+    }
+    
+    .book-cover-container {
+        width: 120px;
+        height: 200px;
+    }
+    
+    .book-card-horizontal .book-title 
+    {
+        font-size: 15px;
+    }
+    
+    .book-card-horizontal .book-desc 
+    {
+        font-size: 13px;
+    }
+    
+    .horizontal-scroll-wrapper 
+    {
+        gap: 20px;
+    }
+    
+    .romance-description, .fiction-description, .collection-description 
+    {
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 15px;
+    }
+    
+    /* Button responsive untuk tablet */
+    .book-card-horizontal > button {
+        padding: 6px 12px;
+        font-size: 12px;
+        width: 110px;
+    }
+    
+    /* Button untuk index.html book cards */
+    .book-card button {
+        padding: 6px 12px;
+        font-size: 12px;
+        width: 110px;
+        margin: 8px auto 3px auto;
+    }
+    
+    .book-card .rating {
+        margin-top: 10px;
+    }
+    
+    /* Dashboard */
+    .books-grid 
+    {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .keep-reading-grid 
+    {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .reading-status-card 
+    {
+        min-width: calc(50% - 10px);
+    }
+    
+    /* Charts Responsive */
+    .chart-container-large 
+    {
+        height: 250px;
+        max-width: 300px;
+    }
+    
+    .chart-body {
+        padding: 15px;
+    }
+    
+    .book-cover 
+    {
+        width: 120px;
+        height: 160px;
+    }
+    
+    .keep-reading-card .book-cover 
+    {
+        width: 60px;
+        height: 80px;
+    }
+    
+    /* Contact Page */
+    .mapbox, .contactbox 
+    {
+        width: 100%;
+    }
+    
+    .contactbox 
+    {
+        margin-top: 20px;
+    }
+    
+    .messagebox 
+    {
+        width: 90%;
+    }
+    
+    /* Footer */
+    footer 
+    {
+        padding: 20px 0;
+    }
+    
+    .social-media a 
+    {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) 
+{
+    /* Books Page */
+    .book-card-horizontal 
+    {
+        width: 280px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .book-card-horizontal img 
+    {
+        width: 140px;
+        height: 180px;
+    }
+    
+    .book-cover-container {
+        width: 140px;
+        height: 220px;
+    }
+    
+    .collection-description p 
+    {
+        font-size: 18px;
+    }
+    
+    .book-card-horizontal > button 
+    {
+        width: 120px;
+    }
+    
+    /* Button untuk index.html book cards */
+    .book-card button {
+        width: 100px;
+        padding: 5px 10px;
+        font-size: 11px;
+        margin: 5px auto 2px auto;
+    }
+    
+    /* Headings */
+    h1 
+    {
+        font-size: 22pt;
+        padding: 15px 10px;
+    }
+    
+    h2 
+    {
+        font-size: 16pt;
+        padding: 15px 10px;
+    }
+    
+    /* Dashboard */
+    .books-grid 
+    {
+        grid-template-columns: 1fr;
+    }
+    
+    .keep-reading-grid 
+    {
+        grid-template-columns: 1fr;
+    }
+    
+    .reading-status-card 
+    {
+        min-width: 100%;
+    }
+    
+    /* Charts untuk very small screens */
+    .chart-container-large 
+    {
+        height: 220px;
+        max-width: 280px;
+    }
+    
+    nav ul li a 
+    {
+        font-size: 12pt;
+        padding: 0 10px;
+    }
+}
